@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if let window = window {
+            let viewController = ViewController()
+            let navigationController = UINavigationController(rootViewController: viewController)
+            window.rootViewController = navigationController
+            window.makeKeyAndVisible()
+        }
         return true
     }
 
@@ -43,9 +50,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         print("Control here")
+        
+        //navigate to next view controller
+//        if let window = window {
+//            let viewController = NextViewController()
+//            let navigationController = UINavigationController(rootViewController: viewController)
+//            window.rootViewController = navigationController
+//            window.makeKeyAndVisible()
+//        }
+        
+        
+        NotificationCenter.default.post(name: .navigate, object: "myObject", userInfo: nil)
+        
         return true
     }
-
-
 }
 

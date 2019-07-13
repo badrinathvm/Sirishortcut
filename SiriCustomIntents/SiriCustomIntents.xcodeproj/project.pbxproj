@@ -14,6 +14,7 @@
 		8B66FCCD22C52D94009A79DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B66FCCB22C52D94009A79DB /* LaunchScreen.storyboard */; };
 		8B66FCD622C52DD3009A79DB /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8B66FCD522C52DD3009A79DB /* Intents.intentdefinition */; };
 		8B66FCD822C52F24009A79DB /* VoiceShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B66FCD722C52F24009A79DB /* VoiceShortcutManager.swift */; };
+		8BD8614622DA43BB006EC642 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD8614522DA43BB006EC642 /* NextViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8B66FCCE22C52D94009A79DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B66FCD522C52DD3009A79DB /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		8B66FCD722C52F24009A79DB /* VoiceShortcutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceShortcutManager.swift; sourceTree = "<group>"; };
+		8BD8614522DA43BB006EC642 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				8B66FCCB22C52D94009A79DB /* LaunchScreen.storyboard */,
 				8B66FCCE22C52D94009A79DB /* Info.plist */,
 				8B66FCD722C52F24009A79DB /* VoiceShortcutManager.swift */,
+				8BD8614522DA43BB006EC642 /* NextViewController.swift */,
 			);
 			path = SiriCustomIntents;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BD8614622DA43BB006EC642 /* NextViewController.swift in Sources */,
 				8B66FCD622C52DD3009A79DB /* Intents.intentdefinition in Sources */,
 				8B66FCC522C52D93009A79DB /* ViewController.swift in Sources */,
 				8B66FCD822C52F24009A79DB /* VoiceShortcutManager.swift in Sources */,

@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
         
         view.addSubview(addToSiri)
@@ -47,6 +48,26 @@ class ViewController: UIViewController {
         ])
         
         shortcutManager = VoiceShortcutManager()
+        
+        //Add a right tab bar button
+        let nextButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(nextScreen(_ :)))
+        self.navigationItem.rightBarButtonItem = nextButton
+        
+        
+        //listen to notification
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.nextScreen(_:)),
+            name: .navigate,
+            object: nil)
+    }
+    
+    @objc func nextScreen(_ sender: UIBarButtonItem) {
+        let nextVC = NextViewController()
+//        self.navigationController?.pushViewController(nextVC, animated: true)
+        
+        self.navigationController?.replaceCurrentViewController(with: nextVC, animated: true)
     }
 }
 
@@ -63,7 +84,9 @@ extension ViewController: INUIAddVoiceShortcutViewControllerDelegate {
     func addVoiceShortcutViewControllerDidCancel(_ controller: INUIAddVoiceShortcutViewController) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
+}
+
+extension Notification.Name {
+    static let navigate = Notification.Name("navigate")
 }
 
